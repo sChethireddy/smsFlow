@@ -1,0 +1,8 @@
+payload = {
+    "From": "198142950436",
+    "Text": "881",
+    "To": "+14084449926",
+    "Mode": "SMS"
+}
+    
+print(type(payload))
