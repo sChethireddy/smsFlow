@@ -17,8 +17,6 @@ from cardEmail import Email
 
 
 
-
-
 class Test_Login():
     
     loginURL = ReadConfig.getURL()
@@ -34,18 +32,37 @@ class Test_Login():
     zipCode = "20137"
     email = Email.gen_random_string(5)+"@gmail.com"
     
+    lprUrl = "https://pinaboxapi-uat.divrt.co/api/v1/lpr"
     
-    def test_Entry(self,userEntry):
+    smsUrl = "https://pinaboxapi-uat.divrt.co/receive_sms"
+    
+    
+    def test_lprCheckin(self):      #lpr checkin for a guest user
+        
+        
+        lprIn = smsCheckin()
+        
+        lpr_response = lprIn.sendEntryRequest('.\\Testdata\\'+'lprIn.json',self.lprUrl)
+        
+        print(lpr_response.json()['message'])
+        
+        assert lpr_response.json()['status']==True
+    
+    def test_Entry(self,userEntry):             #sms checkin for a guest user
         
         
         self.log.info("*********API CHECKIN********")
         
         smsIN = smsCheckin()
         
+        smsEntry = smsIN.sendEntryRequest(userEntry, self.smsUrl)
+        
+        
         global bookingId
         
-        bookingId = smsIN.sendEntryRequest(userEntry)
+        bookingId = smsEntry.json()['refno']
         
+                
         if (bookingId):
             
             self.log.info("Entry Successful")
@@ -54,7 +71,7 @@ class Test_Login():
             
             self.log.error("User unable to checkin")
     
-    def test_Spotman(self,setup,garageName):
+    def test_Spotman(self,setup,garageName):        #spotman actions
         
         self.driver = setup
         self.driver.get(self.loginURL)
@@ -71,7 +88,7 @@ class Test_Login():
             
         self.log.info("Login successful")
         
-        self.driver.save_screenshot('C:/Users/saipr/eclipse-workspace/smsFinal2/Images/login.png')
+        self.driver.save_screenshot('.\\Images\\'+'Login.png')
         
         
         self.log.info("SELECT GARAGE")
@@ -80,14 +97,14 @@ class Test_Login():
         self.live1.selectGarage(self.garage)
         time.sleep(2)
         self.log.info("Live page of garage")
-        self.driver.save_screenshot('C:/Users/saipr/eclipse-workspace/smsFinal2/Images/Garage.png')
+        self.driver.save_screenshot('.\\Images\\'+'Garage.png')
         
         self.log.info("CLICK BOOKINGID")
         
         self.link = bookingLink(self.driver)
         self.link.clickSearch(bookingId)
         time.sleep(5)
-        self.driver.save_screenshot('C:/Users/saipr/eclipse-workspace/smsFinal2/Images/BookingID.png')
+        self.driver.save_screenshot('.\\Images\\'+'BookingId.png')
        
         self.link.refreshButton()
         
@@ -108,17 +125,17 @@ class Test_Login():
         self.card.enterCardDetails(self.cardNumber, self.expiryDate, self.Cvv, self.zipCode, self.email)
         self.log.info("Card Details Entered")
         time.sleep(3)
-        self.driver.save_screenshot('C:/Users/saipr/eclipse-workspace/smsFinal2/Images/CardDetails.png')
+        self.driver.save_screenshot('.\\Images\\'+'CardDetails.png')
         self.card.clickAddPayment()
         self.log.info("Card Added")
         time.sleep(5)
-        self.driver.save_screenshot('C:/Users/saipr/eclipse-workspace/smsFinal2/Images/ExitPage.png')
+        self.driver.save_screenshot('.\\Images\\'+'ExitPage.png')
         time.sleep(5)
         self.driver.close()
         self.driver.quit()
         
     
-    def test_Exit(self,userExit):
+    def test_Exit(self,userExit):       #guest checkout using sms api
             
             
         self.log.info("API CHECKOUT")

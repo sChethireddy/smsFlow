@@ -15,7 +15,7 @@ class Logs:
         loggerName = inspect.stack()[1][3]
         logger = logging.getLogger(loggerName)
         formatter = logging.Formatter("%(asctime)s :%(levelname)s : %(name)s :%(message)s")
-        fileHandler = logging.FileHandler("C:/Users/saipr/eclipse-workspace/smsFinal6/Logs/logfile.log")
+        fileHandler = logging.FileHandler("C:/Users/saipr/eclipse-workspace/smsFinal7/Logs/logfile.log")
         fileHandler.setFormatter(formatter)
         logger.addHandler(fileHandler)  # filehandler object
         logger.setLevel(logging.INFO)

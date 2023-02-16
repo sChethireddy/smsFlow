@@ -18,7 +18,7 @@ class smsCheckOut():
         
         for i in data["userdetails"]:
             
-            resp = requests.post("https://pinaboxapi-dev.divrt.co/receive_sms",data=i)
+            resp = requests.post("https://pinaboxapi-uat.divrt.co/receive_sms",data=i)
             
             print(resp.json())
             

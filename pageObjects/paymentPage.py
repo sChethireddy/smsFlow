@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 
 class addCard():
     
-    addCC = "(//button[@type='button'])[5]"
+    addCC = "//span[normalize-space()='ADD CREDIT CARD']"
     addPayment = "//span[normalize-space()='ADD PAYMENT']"
     
     def __init__(self,driver):

@@ -13,6 +13,8 @@ class bookingLink():
     
     book_xpath = "(//a[@target='_blank'])[1]"
     
+    refresh_xpath = "//i[contains(.,'refresh')]"
+    
     
     def __init__(self,driver):
         
@@ -32,5 +34,8 @@ class bookingLink():
         
         self.driver.switch_to.window(self.driver.window_handles[1])
         
+    def refreshButton(self):
+        
+        self.driver.find_element("xpath",self.refresh_xpath).click()
         
         

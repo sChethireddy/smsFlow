@@ -11,7 +11,7 @@ def setup():
     
     global driver
     
-    driver = webdriver.Chrome("C:\\Users\\saipr\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe")
+    driver = webdriver.Chrome("C:\\Users\\saipr\\Downloads\\chromedriver_win32\\chromedriver.exe")
     
     return driver
 
@@ -33,8 +33,8 @@ def pytest_metadata(metadata):
     
 def pytest_addoption(parser):
     parser.addoption("--garageName")
-    parser.addoption("--fileEntry")
-    parser.addoption("--fileExit")
+    parser.addoption("--userEntry")
+    parser.addoption("--userExit")
    
 @pytest.fixture(scope="class",autouse=True)
 def garageName(request):
@@ -48,12 +48,9 @@ def userEntry(request):
 def userExit(request):
     return request.config.getoption("--userExit")
     
-@pytest.hookimpl(hookwrapper=True)
+"""@pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item):
-    """
-    Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
-    :param item:
-    """
+    
     pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
@@ -68,7 +65,7 @@ def pytest_runtest_makereport(item):
                 html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
                        'onclick="window.open(this.src)" align="right"/></div>' % file_name
                 extra.append(pytest_html.extras.html(html))
-        report.extra = extra
+        report.extra = extra"""
 
 
 

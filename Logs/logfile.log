@@ -247,3 +247,59 @@
 2022-10-26 00:44:34,212 :INFO : Test_Login :Card Added
 2022-10-26 00:44:46,763 :INFO : Test_Login :API CHECKOUT
 2022-10-26 00:44:52,318 :INFO : Test_Login :Exit Success
+2023-02-16 15:14:36,496 :INFO : Test_Login :*********API CHECKIN********
+2023-02-16 15:14:38,224 :INFO : Test_Login :Entry Successful
+2023-02-16 15:14:50,226 :INFO : Test_Login :Login to Spotman
+2023-02-16 15:14:52,691 :INFO : Test_Login :Login successful
+2023-02-16 15:14:53,383 :INFO : Test_Login :SELECT GARAGE
+2023-02-16 15:14:56,304 :INFO : Test_Login :Live page of garage
+2023-02-16 15:14:56,692 :INFO : Test_Login :CLICK BOOKINGID
+2023-02-16 15:14:56,957 :INFO : Test_Login :API CHECKOUT
+2023-02-16 15:14:58,989 :INFO : Test_Login :Exit Success
+2023-02-16 15:18:42,204 :INFO : Test_Login :*********API CHECKIN********
+2023-02-16 15:18:43,764 :INFO : Test_Login :Entry Successful
+2023-02-16 15:18:53,503 :INFO : Test_Login :Login to Spotman
+2023-02-16 15:18:55,985 :INFO : Test_Login :Login successful
+2023-02-16 15:18:57,800 :INFO : Test_Login :SELECT GARAGE
+2023-02-16 15:19:01,371 :INFO : Test_Login :Live page of garage
+2023-02-16 15:19:01,551 :INFO : Test_Login :CLICK BOOKINGID
+2023-02-16 15:19:01,619 :INFO : Test_Login :API CHECKOUT
+2023-02-16 15:19:52,287 :INFO : Test_Login :*********API CHECKIN********
+2023-02-16 15:19:54,919 :INFO : Test_Login :Entry Successful
+2023-02-16 15:20:07,345 :INFO : Test_Login :Login to Spotman
+2023-02-16 15:20:09,833 :INFO : Test_Login :Login successful
+2023-02-16 15:20:10,518 :INFO : Test_Login :SELECT GARAGE
+2023-02-16 15:20:13,233 :INFO : Test_Login :Live page of garage
+2023-02-16 15:20:13,356 :INFO : Test_Login :CLICK BOOKINGID
+2023-02-16 15:20:13,381 :INFO : Test_Login :API CHECKOUT
+2023-02-16 15:22:22,282 :INFO : Test_Login :*********API CHECKIN********
+2023-02-16 15:22:23,962 :INFO : Test_Login :Entry Successful
+2023-02-16 15:22:33,992 :INFO : Test_Login :Login to Spotman
+2023-02-16 15:22:36,473 :INFO : Test_Login :Login successful
+2023-02-16 15:22:37,307 :INFO : Test_Login :SELECT GARAGE
+2023-02-16 15:22:40,135 :INFO : Test_Login :Live page of garage
+2023-02-16 15:22:40,523 :INFO : Test_Login :CLICK BOOKINGID
+2023-02-16 15:22:40,538 :INFO : Test_Login :API CHECKOUT
+2023-02-16 15:22:42,464 :INFO : Test_Login :Exit Success
+2023-02-16 15:24:40,226 :INFO : Test_Login :*********API CHECKIN********
+2023-02-16 15:24:41,717 :INFO : Test_Login :Entry Successful
+2023-02-16 15:24:50,016 :INFO : Test_Login :Login to Spotman
+2023-02-16 15:24:52,506 :INFO : Test_Login :Login successful
+2023-02-16 15:24:53,005 :INFO : Test_Login :SELECT GARAGE
+2023-02-16 15:24:55,627 :INFO : Test_Login :Live page of garage
+2023-02-16 15:24:56,037 :INFO : Test_Login :CLICK BOOKINGID
+2023-02-16 15:25:03,907 :INFO : Test_Login :Clicked on BookingID
+2023-02-16 15:25:06,917 :INFO : Test_Login :ENTER CARD DETAILS
+2023-02-16 15:25:21,340 :INFO : Test_Login :API CHECKOUT
+2023-02-16 15:27:07,141 :INFO : Test_Login :*********API CHECKIN********
+2023-02-16 15:27:08,697 :INFO : Test_Login :Entry Successful
+2023-02-16 15:27:23,175 :INFO : Test_Login :Login to Spotman
+2023-02-16 15:27:25,645 :INFO : Test_Login :Login successful
+2023-02-16 15:27:26,167 :INFO : Test_Login :SELECT GARAGE
+2023-02-16 15:27:28,947 :INFO : Test_Login :Live page of garage
+2023-02-16 15:27:29,095 :INFO : Test_Login :CLICK BOOKINGID
+2023-02-16 15:27:36,797 :INFO : Test_Login :Clicked on BookingID
+2023-02-16 15:27:39,806 :INFO : Test_Login :ENTER CARD DETAILS
+2023-02-16 15:27:50,423 :INFO : Test_Login :Card Details Entered
+2023-02-16 15:27:53,618 :INFO : Test_Login :Card Added
+2023-02-16 15:28:06,249 :INFO : Test_Login :API CHECKOUT

@@ -7,7 +7,7 @@ Created on 06-Oct-2022
 import configparser
 
 config = configparser.RawConfigParser()
-config.read("C:/Users/saipr/eclipse-workspace/smsFinal6/Configurations/config.ini")
+config.read("C:/Users/saipr/eclipse-workspace/smsFinal7/Configurations/config.ini")
 
 class ReadConfig():
     

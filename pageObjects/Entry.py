@@ -10,7 +10,7 @@ import json
 
 class smsCheckin():
     
-    def sendEntryRequest(self,fileName):
+    def sendEntryRequest(self,fileName,apiEntry):
     
         
         with open(fileName) as input_data:
@@ -19,12 +19,6 @@ class smsCheckin():
         
         for i in data["userdetails"]:
             
-            resp = requests.post("https://pinaboxapi-dev.divrt.co/receive_sms",data=i)
+            api_response = requests.post(url=apiEntry,data=i)
             
-            print(resp.json())
-            
-            booking_id = resp.json()['refno']
-        
-            print("Boooking ID for entry is " " "+resp.json()['refno'])
-        
-        return booking_id
+            return api_response
