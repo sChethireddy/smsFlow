@@ -33,7 +33,7 @@ class Test_Login():
     Cvv = "123"
     zipCode = "20137"
     email = Email.gen_random_string(5)+"@gmail.com"
-    
+    smsUrl = "https://pinaboxapi-uat.divrt.co/receive_sms"
     
     def test_Entry(self,userEntry):
         
@@ -44,7 +44,7 @@ class Test_Login():
         
         global bookingId
         
-        bookingId = smsIN.sendEntryRequest(userEntry)
+        bookingId = smsIN.sendEntryRequest(userEntry, self.smsUrl)
         
         if (bookingId):
             
